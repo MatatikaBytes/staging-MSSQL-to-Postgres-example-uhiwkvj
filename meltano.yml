@@ -1,6 +1,14 @@
 version: 1
 default_environment: dev
 project_id: 8f5cee63-eadf-47d0-bc89-371c4324be0b
+plugins:
+  extractors:
+  - name: tap-mssql
+    variant: transferwise
+    pip_url: git+https://github.com/Matatika/pipelinewise-tap-mssql.git
+  files:
+  - name: files-dbt
+    pip_url: git+https://github.com/Matatika/files-dbt@v1.0.x.0
 environments:
 - name: dev
 - name: staging
